@@ -1,0 +1,47 @@
+{
+    "name" : "Игры",
+	"nameLocale": {
+			"ru": "Игры",
+			"en": "Games"
+	},
+    "guid" : "asc.{C33BDC0F-BC1A-7FB4-4C0D-058F4076757C}",
+	"version": "2.0",
+    "variations" : [
+        {
+            "description" : "Игры в вашем редакторе",
+			"descriptionLocale" : {
+					"ru": "Игры в вашем редакторе",
+					"en": "Games in your editor"
+			},
+            "url"         : "index.html",
+            "icons": [ "resources/icon.png", "resources/icon@2x.png" ],
+			"icons2": [
+				{
+					"style" : "light",
+					"100%": {"normal": "resources/icon.png"},
+					"125%": {"normal": "resources/icon@1.25x.png"},
+					"150%": {"normal": "resources/icon@1.5x.png"},
+					"175%": {"normal": "resources/icon@1.75x.png"},
+					"200%": {"normal": "resources/icon@2x.png"}
+				},
+				{
+					"style" : "dark",
+					"100%": {"normal": "resources/icon.png"},
+					"125%": {"normal": "resources/icon@1.25x.png"},
+					"150%": {"normal": "resources/icon@1.5x.png"},
+					"175%": {"normal": "resources/icon@1.75x.png"},
+					"200%": {"normal": "resources/icon@2x.png"}
+				}
+			],
+            "isViewer"        : false,
+            "EditorsSupport"  : ["word","cell","slide"],
+            "isVisual"        : false,
+            "isModal"         : false,
+            "isInsideMode"    : false,
+            "isSystem"        : true,
+            "initDataType"    : "none",
+			"initData"        : "",
+            "events"          : ["onDocumentContentReady"]
+        }
+    ]
+}
