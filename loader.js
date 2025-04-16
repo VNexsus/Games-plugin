@@ -59,7 +59,7 @@
                         dataHint: "0",
 						caption: game.name
                     }).render(panel.find('#btn-game-'+ (i+1))).on("click", function(){window.Asc.plugin.run(game)});
-					styles += `.btn-game-`+ (i+1) +`{background-image: url('`+ baseurl + game.icon +`');background-size: contain;}`;
+					styles += `.btn-game-`+ (i+1) +`{background-image: url('`+ baseurl + game.icon +`')!important; background-size: contain!important;}`;
 				});
 				window.parent.$("section.box-panels").append(panel);
 				tlb.controllers.Toolbar.toolbar.$panels = parent.$('.panel');
