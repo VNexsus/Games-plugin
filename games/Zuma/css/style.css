@@ -210,9 +210,21 @@ body {
   height: 100%;
   position: relative;
   background-size: contain;
-  background-image: url("./../image/frog.svg");
+  /*background-image: url("./../image/frog.svg");*/
+  background-image: url("./../image/frogback.png");
   z-index: 2;
 }
+
+.container .player .cover {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: contain;
+  background-image: url("./../image/frogfront.png");
+  z-index: 10;
+}
+
 .container .player .marble-1,
 .container .player .marble-2 {
   position: absolute;
@@ -222,12 +234,22 @@ body {
   width: 60px;
   height: 60px;
   border-radius: 100px;
-  top: -10px;
+  top: 10px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
+
+
 .container .player .marble-2 {
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+    top: 115px;
+    left: 74px;
+}
+
+/*.container .player .marble-2 {
   width: 20px;
   height: 20px;
   border-radius: 100px;
@@ -250,7 +272,8 @@ body {
   top: 85px;
   -webkit-transform: translateX(calc(-50% + 30px));
           transform: translateX(calc(-50% + 30px));
-}
+}*/
+
 .container .start-hole {
   width: 100px;
   height: 100px;
@@ -268,6 +291,19 @@ body {
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.container .final-hole::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    background-size: cover;
+    background-image: url(./../image/hole.png);
+    z-index: 2;
+    left: -10px;
+    top: -10px;
 }
 
 /*.marble {
@@ -298,6 +334,10 @@ body {
 .marble.c-e902ea { /* purple */
 	background-image: url(../image/marbles/purple.png);
 }
+.marble.c-fdf7d0 { /* gold */
+	background-image: url(../image/marbles/gold.png);
+}
+
 
 
 .shadow {
