@@ -30,6 +30,10 @@ class Marble {
 				this.totalframes = 49;
 				this.sx = 192;
 				break;
+			case "#fdf7d0": // gold
+				this.totalframes = 49;
+				this.sx = 240;
+				break;
 		}
 		this.frame = this.totalframes;
 		
@@ -97,10 +101,13 @@ class MarbleSprite {
 class Player {
     constructor({ x = 0, y = 0 }) {
         this.Marble = createDiv(["marble-1","marble"]);
-        this.NextMarbleList = [createDiv(["marble-2"]), createDiv(["marble-2"]), createDiv(["marble-2"])];
+        //this.NextMarbleList = [createDiv(["marble-2"]), createDiv(["marble-2"]), createDiv(["marble-2"])];
+        this.NextMarbleList = [createDiv(["marble-2"])];
+		this.Cover = createDiv(["cover"])
         this.DOM = createDiv(["player"], [
             this.Marble,
-            ...this.NextMarbleList
+            ...this.NextMarbleList,
+			this.Cover
         ]);
         this.rotate = 0;
         this.X = x;
@@ -129,7 +136,7 @@ class Player {
     setMarbleColor(color) {
         this.Marble.style.backgroundColor = color;
 		
-		this.Marble.classList.remove("c-23e406", "c-04bfe6", "c-ffed00", "c-e902ea", "c-e80000");
+		this.Marble.classList.remove("c-23e406", "c-04bfe6", "c-ffed00", "c-e902ea", "c-e80000","c-fdf7d0");
 		this.Marble.classList.add("c-" + color.substring(1));
 		
         return this;
@@ -590,4 +597,4 @@ class Player {
     }
 }
 
-Zuma.DefaultColorList = ["#23e406", "#04bfe6", "#ffed00", "#e902ea", "#e80000"];
+Zuma.DefaultColorList = ["#23e406", "#04bfe6", "#ffed00", "#e902ea", "#e80000","#fdf7d0"];
