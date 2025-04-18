@@ -91,6 +91,7 @@
 		
 		// check for removed target
 		var target = parent.document.getElementById("iframe_asc.{-1}");
+		target.focus();
 		var observer = new MutationObserver(function(mutations) {
 			mutations.forEach(function(mutation) {
 				var nodes = Array.from(mutation.removedNodes);
